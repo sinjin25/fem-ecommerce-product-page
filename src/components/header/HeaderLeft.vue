@@ -61,7 +61,7 @@ import useSidebar from '@/composables/use-sidebar';
                 position: absolute;
                 left: 0;
                 right: 0;
-                bottom: -35px;
+                bottom: -45px;
 
                 height: 4px;
                 width: 100%;

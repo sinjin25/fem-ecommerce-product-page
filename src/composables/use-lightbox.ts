@@ -1,9 +1,15 @@
 import { ref } from "vue"
+import useLockScroll from "./use-lock-scroll"
 
 export default (() => {
     const open = ref(false)
     const setOpenTo = (val: boolean) => {
         open.value = val
+        if (open.value) {
+            useLockScroll.lock()
+        } else {
+            useLockScroll.unlock()
+        }
     }
 
     const activeImg = ref(0)

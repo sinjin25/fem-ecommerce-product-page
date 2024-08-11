@@ -28,6 +28,8 @@ import useLightbox from '@/composables/use-lightbox';
 const ul = useLightbox
 
 const openLightbox = (activeImgIndex: number) => {
+
+    if (window.innerWidth < 768) return
     ul.setOpenTo(true)
     ul.swapImg(activeImgIndex)
 }

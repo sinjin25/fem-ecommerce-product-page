@@ -74,6 +74,23 @@ svg.clickable {
     display: flex;
     flex-direction: column;
 
+    @media only screen and (min-width: 768px) {
+        top: 94px;
+        /// should've just had cart relatively positioned and based the expanded cart on the icon
+        right: 90px;
+        bottom: unset;
+        left: unset;
+        width: 360px;
+        min-height: 256px;
+
+        box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, .5);
+    }
+
+    @media only screen and (min-width: 1300px) {
+        // bandaid for centering on the cart icon
+        right: calc(50vw - 555px + 60px - 180px);
+    }
+
     >*:nth-child(1) {
         flex: 0 0 auto;
     }

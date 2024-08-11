@@ -48,7 +48,8 @@ const openCart = () => {
     @media only screen and (min-width: 768px) {
         max-width: 1110px;
         border-bottom: 1px solid #E4E9F2;
-        padding-bottom: 34px;
+        padding-top: 41px;
+        padding-bottom: 45px;
         margin-bottom: 90px;
     }
 
@@ -90,39 +91,6 @@ const openCart = () => {
             border-radius: 6.5px;
         }
 
-    }
-}
-
-.menu {
-    background: var(--white);
-    padding: 25px;
-    height: 100%;
-    width: 250px;
-
-    &-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, .70);
-    }
-
-    &-close {
-        margin-bottom: 54px;
-        fill: var(--dark-grayish-blue);
-
-        &:hover {
-            fill: var(--orange);
-        }
-    }
-
-    &-items {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    &-item {
-        font-size: 18px;
-        line-height: 26px;
     }
 }
 </style>

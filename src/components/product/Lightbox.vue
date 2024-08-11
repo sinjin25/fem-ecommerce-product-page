@@ -1,7 +1,7 @@
 <template>
     <Teleport to="body">
-        <div class="lightbox-overlay d-flex jc-c ai-c" v-if="ul.open.value">
-            <div class="lightbox d-flex">
+        <div class="lightbox-overlay d-flex jc-c ai-c" v-if="ul.open.value" @click="ul.setOpenTo(false)">
+            <div class="lightbox d-flex" @click.stop>
                 <div class="lightbox-close pb-24">
                     <div class="px-10 py-10 clickable" @click="ul.setOpenTo(false)">
                         <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">

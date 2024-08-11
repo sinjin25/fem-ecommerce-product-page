@@ -32,6 +32,8 @@ import ProductPrice from './product/ProductPrice.vue';
     width: var(--mobile-w);
     height: var(--mobile-h);
 
+    background: var(--white);
+
     @media only screen and (min-width: 768px) {
         width: 100%;
         height: unset;
