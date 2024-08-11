@@ -1,0 +1,130 @@
+@use './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    // primary
+    --orange: #ff7d1a;
+    --pale-orange: #ffede0;
+    // neutral
+    --very-dark-blue: #1d2025; // standard black
+    --dark-grayish-blue: #69707D;
+    --grayish-blue: #b6bcc8;
+    --light-grayish-blue: #f7f8fd;
+    --white: #ffffff;
+    --black: #000000;
+
+    // typography
+    --fs: 16px;
+    --lh: 26px; // why did they do this
+}
+
+body {
+    background: #F2F2F2;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+
+    font-size: var(--fs);
+    line-height: 26px;
+    color: var(--very-dark-blue);
+}
+
+// utility
+.lh {
+    &-1 {
+        line-height: 1;
+    }
+}
+
+$weights: 400, 700;
+
+@each $w in $weights {
+    .fw-#{$w} {
+        font-weight: $w;
+    }
+}
+
+$paddings: 15, 16, 20, 24, 32;
+
+@each $pad in $paddings {
+    .pb-#{$pad} {
+        padding-bottom: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .pt-#{$pad} {
+        padding-top: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .px-#{$pad} {
+        padding-left: #{$pad}px;
+        padding-right: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .py-#{$pad} {
+        padding-top: #{$pad}px;
+        padding-bottom: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .mb-#{$pad} {
+        margin-bottom: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .mt-#{$pad} {
+        margin-top: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .mx-#{$pad} {
+        margin-left: #{$pad}px;
+        margin-right: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    .my-#{$pad} {
+        margin-top: #{$pad}px;
+        margin-bottom: #{$pad}px;
+    }
+}
+
+$displays: flex, none, block;
+
+@each $d in $displays {
+    .d-#{$d} {
+        display: $d;
+    }
+}
+
+.jc {
+    &-c {
+        justify-content: center;
+    }
+}
+
+.ai {
+    &-c {
+        align-items: center;
+    }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.clickable {
+    cursor: pointer;
+}
