@@ -1,7 +1,9 @@
 <template>
     <div class="main">
-        <HeaderBar></HeaderBar>
-        <div>
+        <div class="main-inner">
+            <HeaderBar></HeaderBar>
+        </div>
+        <div class="main-inner">
             <ProductImage class="pb-24"></ProductImage>
             <ProductInfo class="px-24 pb-24"></ProductInfo>
             <ProductPrice class="px-24 pb-16"></ProductPrice>
@@ -27,6 +29,19 @@ import ProductPrice from './product/ProductPrice.vue';
     height: var(--mobile-h);
 
     background: white;
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+        height: unset;
+    }
+
+    &-inner {
+        @media only screen and (min-width: 768px) {
+            max-width: 1110px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 /* .product {

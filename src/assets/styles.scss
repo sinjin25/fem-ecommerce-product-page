@@ -1,6 +1,8 @@
 @use './reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
+$lg: 768px;
+
 :root {
     // primary
     --orange: #ff7d1a;
@@ -102,6 +104,14 @@ $displays: flex, none, block;
 @each $d in $displays {
     .d-#{$d} {
         display: $d;
+    }
+}
+
+@each $d in $displays {
+    .d-lg-#{$d} {
+        @media only screen and (min-width: $lg) {
+            display: $d;
+        }
     }
 }
 
