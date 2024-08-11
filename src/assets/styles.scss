@@ -21,7 +21,7 @@ $lg: 768px;
 }
 
 body {
-    background: #F2F2F2;
+    background: white;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 400;
 
@@ -45,7 +45,7 @@ $weights: 400, 700;
     }
 }
 
-$paddings: 15, 16, 20, 24, 32;
+$paddings: 0, 10, 15, 16, 20, 24, 26, 32, 40, 62;
 
 @each $pad in $paddings {
     .pb-#{$pad} {
@@ -54,8 +54,24 @@ $paddings: 15, 16, 20, 24, 32;
 }
 
 @each $pad in $paddings {
+    @media only screen and (min-width: 768px) {
+        .pb-lg-#{$pad} {
+            padding-bottom: #{$pad}px;
+        }
+    }
+}
+
+@each $pad in $paddings {
     .pt-#{$pad} {
         padding-top: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    @media only screen and (min-width: 768px) {
+        .pt-lg-#{$pad} {
+            padding-top: #{$pad}px;
+        }
     }
 }
 
@@ -67,6 +83,15 @@ $paddings: 15, 16, 20, 24, 32;
 }
 
 @each $pad in $paddings {
+    @media only screen and (min-width: 768px) {
+        .px-lg-#{$pad} {
+            padding-left: #{$pad}px;
+            padding-right: #{$pad}px;
+        }
+    }
+}
+
+@each $pad in $paddings {
     .py-#{$pad} {
         padding-top: #{$pad}px;
         padding-bottom: #{$pad}px;
@@ -74,8 +99,25 @@ $paddings: 15, 16, 20, 24, 32;
 }
 
 @each $pad in $paddings {
+    @media only screen and (min-width: 768px) {
+        .py-lg-#{$pad} {
+            padding-top: #{$pad}px;
+            padding-bottom: #{$pad}px;
+        }
+    }
+}
+
+@each $pad in $paddings {
     .mb-#{$pad} {
         margin-bottom: #{$pad}px;
+    }
+}
+
+@each $pad in $paddings {
+    @media only screen and (min-width: 768px) {
+        .mb-lg-#{$pad} {
+            margin-bottom: #{$pad}px;
+        }
     }
 }
 
@@ -118,6 +160,10 @@ $displays: flex, none, block;
 .jc {
     &-c {
         justify-content: center;
+    }
+
+    &-sb {
+        justify-content: space-between;
     }
 }
 

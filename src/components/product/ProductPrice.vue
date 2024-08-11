@@ -1,13 +1,14 @@
 <template>
     <div>
-        <div class="product-price-total d-flex ai-c mb-20 fw-700">
+        <div class="product-price-total d-flex ai-c mb-20 mb-26 mb-lg-32 fw-700">
             <div class="product-price-total">$125.00</div>
             <div>50%</div>
-            <div class="ml-auto">$250</div>
+            <div class="product-price-final ml-auto">$250</div>
         </div>
         <div class="product-price-group d-flex">
             <div class="product-price-quantity d-flex ai-c fw-700">
-                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-15" @click="changeQuantity(-1)">
+                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-10"
+                    @click="changeQuantity(-1)">
                     <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -19,7 +20,8 @@
                     </svg>
                 </div>
                 <div>{{ quantity }}</div>
-                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-15" @click="changeQuantity(1)">
+                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-10"
+                    @click="changeQuantity(1)">
                     <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -68,7 +70,18 @@ const addToCart = () => {
 <style lang="scss" scoped>
 .product-price {
     &-total {
+        flex-wrap: wrap;
         gap: 16px;
+
+        @media only screen and (min-width: 768px) {
+            // scuffed version of horizontal gap 16, vertical gap 10
+            // maybe try grid next time
+            gap: 10px;
+
+            &>*:nth-child(1) {
+                padding-right: 6;
+            }
+        }
 
         &>*:nth-child(1) {
             font-size: 28px;
@@ -90,17 +103,34 @@ const addToCart = () => {
         }
     }
 
+    @media only screen and (min-width: 768px) {
+        &-final {
+            min-width: 100%;
+        }
+    }
+
     &-group {
         flex-direction: column;
         gap: 20px;
+
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 16px;
+
+            &>*:nth-child(1) {
+                flex: 0 0 156px;
+            }
+
+            &>*:nth-child(2) {
+                flex: 1 1 auto;
+            }
+        }
     }
 
     &-quantity {
         height: 56px;
         justify-content: space-between;
         background: #F6F8FD;
-        padding-left: 22px;
-        padding-right: 22px;
         border-radius: 10px;
     }
 

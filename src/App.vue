@@ -14,9 +14,9 @@ import MainWrapper from './components/MainWrapper.vue'
 
 <style scoped>
 .correction {
-    display: flex;
+    /* display: flex;
     min-height: 100vh;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 </style>
