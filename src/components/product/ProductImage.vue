@@ -24,6 +24,7 @@
 import { ref } from 'vue';
 import Next from './Next.vue'
 import useLightbox from '@/composables/use-lightbox';
+// @ts-ignore
 
 const ul = useLightbox
 
@@ -35,10 +36,10 @@ const openLightbox = (activeImgIndex: number) => {
 }
 
 const images = ref([
-    `/assets/images/image-product-1.jpg`,
-    `/assets/images/image-product-2.jpg`,
-    `/assets/images/image-product-3.jpg`,
-    `/assets/images/image-product-4.jpg`,
+    new URL(`/assets/images/image-product-1.jpg`, import.meta.url).href,
+    new URL(`/assets/images/image-product-2.jpg`, import.meta.url).href,
+    new URL(`/assets/images/image-product-3.jpg`, import.meta.url).href,
+    new URL(`/assets/images/image-product-4.jpg`, import.meta.url).href,
 ])
 const activeImg = ref(0)
 const swapImg = (index: number) => {
