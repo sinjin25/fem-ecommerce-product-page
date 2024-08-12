@@ -19,7 +19,7 @@
                         fill="#69707D" fill-rule="nonzero" />
                 </svg>
             </div>
-            <img class="top-avatar clickable" src="/src/assets/images/image-avatar.png" />
+            <img class="top-avatar clickable" src="/assets/images/image-avatar.png" />
         </div>
     </div>
 </template>

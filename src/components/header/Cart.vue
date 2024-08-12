@@ -10,7 +10,7 @@
             <template v-else>
                 <div class="px-24 pt-24">
                     <div v-for="(item, index) in useCart.items.value" :key="index" class="cart-item d-flex ai-c">
-                        <img class="cart-item-thumb" src="/src/assets/images/image-product-1-thumbnail.jpg">
+                        <img class="cart-item-thumb" src="/assets/images/image-product-1-thumbnail.jpg">
                         <div class="cart-item-body">
                             <div class="cart-item-title">{{ item.name }}</div>
                             <div>{{ (item.price).toFixed(2) }} x {{ item.quantity }} <span
