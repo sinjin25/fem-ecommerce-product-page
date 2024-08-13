@@ -3,11 +3,11 @@
         <div class="product-price-total d-flex ai-c mb-20 mb-26 mb-lg-32 fw-700">
             <div class="product-price-total">$125.00</div>
             <div>50%</div>
-            <div class="product-price-final ml-auto">$250</div>
+            <div class="product-price-final ml-auto">$250.00</div>
         </div>
         <div class="product-price-group d-flex">
             <div class="product-price-quantity d-flex ai-c fw-700">
-                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-10"
+                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-16"
                     @click="changeQuantity(-1)">
                     <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -20,7 +20,7 @@
                     </svg>
                 </div>
                 <div>{{ quantity }}</div>
-                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-10"
+                <div class="product-price-quant-btn clickable d-flex ai-c jc-c py-15 px-24 px-lg-16"
                     @click="changeQuantity(1)">
                     <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -49,7 +49,7 @@
 import { ref } from 'vue';
 import useCart from '@/composables/use-cart';
 
-const quantity = ref(1)
+const quantity = ref(0)
 const changeQuantity = (val: number) => {
     if (quantity.value + val >= 1) {
         quantity.value += val
@@ -93,6 +93,7 @@ const addToCart = () => {
             background: var(--very-dark-blue);
             padding: 4px 10px;
             border-radius: 6px;
+            line-height: 1.25;
         }
 
         &>*:nth-child(3) {

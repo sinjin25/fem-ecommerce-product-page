@@ -48,8 +48,7 @@ const openCart = () => {
     @media only screen and (min-width: 768px) {
         max-width: 1110px;
         border-bottom: 1px solid #E4E9F2;
-        padding-top: 28px;
-        padding-bottom: 34px;
+        padding: 28px 0px 34px 0px;
         margin-bottom: 90px;
     }
 

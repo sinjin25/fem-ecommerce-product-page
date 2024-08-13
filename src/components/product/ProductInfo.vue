@@ -19,6 +19,7 @@
 
         @media only screen and (min-width: 768px) {
             font-size: 13px;
+            line-height: 16px;
             letter-spacing: 2px;
         }
     }
