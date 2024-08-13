@@ -48,8 +48,8 @@ const openCart = () => {
     @media only screen and (min-width: 768px) {
         max-width: 1110px;
         border-bottom: 1px solid #E4E9F2;
-        padding-top: 41px;
-        padding-bottom: 45px;
+        padding-top: 28px;
+        padding-bottom: 34px;
         margin-bottom: 90px;
     }
 
@@ -65,13 +65,18 @@ const openCart = () => {
         align-items: center;
 
         @media only screen and (min-width: 768px) {
-            gap: 16px;
+            gap: 46px;
         }
     }
 
     &-avatar {
         width: 24px;
         height: 24px;
+
+        @media only screen and (min-width: 768px) {
+            height: 50px;
+            width: 50px;
+        }
     }
 
     &-cart-quantity {

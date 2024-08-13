@@ -12,11 +12,14 @@ import MainWrapper from './components/MainWrapper.vue'
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .correction {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 </style>
