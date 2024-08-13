@@ -106,7 +106,7 @@ const ul = useLightbox
             border-radius: 10px;
             overflow: hidden;
 
-            border: 2px solid var(--white);
+            border: 2px solid transparent;
 
             &.--active {
                 border-color: var(--orange);
